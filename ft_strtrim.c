@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:13:29 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/08 14:23:07 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/08 15:18:52 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -45,4 +45,4 @@ int	main(void)
 	char const s1[20] = "ton va tester not";
 	char const set[2] = "t";
 	printf("%s", ft_strtrim(s1, set));
-}
+}*/
