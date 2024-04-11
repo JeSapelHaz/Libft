@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/07 13:40:22 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/11 16:50:03 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	int		j;
-	int		k;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	if (little[0] == '\0')
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			k = i;
 			j = 0;
-			while (big[k] == little[j])
+			while (big[k] == little[j] && k < len)
 			{
 				if (little[j + 1] == '\0')
 					return ((char *)&big[i]);
@@ -42,14 +42,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 /*
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char	*big;
-	char	*little;
+	char	*s1;
+	char	*s2;
+	size_t	max;
 
-	big = "salut mo mon super pote";
-	little = "mon";
-	printf("%s ", ft_strnstr(big, little, 10));
+	s1 = "MZIRIBMZIRIBMZE123";
+	s2 = "MZIRIBMZE";
+	max = strlen(s2);
+	printf("%s", strnstr(s1, s2, max));
+	printf("%s", ft_strnstr(s1, s2, max));
 }
-*/
+ */

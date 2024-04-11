@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 15:15:32 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/06 15:31:46 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/09 14:14:01 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* copie n octets depuis la zone mémoire src vers la zone mémoire dest*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -25,12 +25,19 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*
+/* 
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
-	const char src[10] = "salut";
-	char dest[10];
+	const double src[5] = {4.2,2.5,2.3,2.4,2.8};
+	double dest[5];
+
+	ft_memcpy(dest,src,sizeof(src));
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%f",dest[i]);
+	}
 	
-	printf("%s", ft_memcpy(dest, src, 4));
-}*/
+	//printf("%s", ft_memcpy(dest, src, 4));
+} */

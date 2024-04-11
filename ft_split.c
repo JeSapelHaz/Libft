@@ -6,13 +6,13 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:21:52 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/08 17:48:03 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/11 18:33:34 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	nb;
@@ -31,7 +31,7 @@ int	count_words(char const *s, char c)
 	return (nb);
 }
 
-int	len_word(char const *s, char c, int i)
+static int	len_word(char const *s, char c, int i)
 {
 	int	nb;
 
@@ -44,7 +44,7 @@ int	len_word(char const *s, char c, int i)
 	return (nb);
 }
 
-char	*put_str(char const *s, char c, int i)
+static char	*put_str(char const *s, char c, int i)
 {
 	int		j;
 	int		len;
@@ -91,13 +91,13 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-/*
+/* 
 #include <stdio.h>
 
 int	main(void)
 {
-	char *str = "kkkk ca kkkkkk va kkkkk    
-	wjhqbdkw kcjnckejbcmxmnmzjbfelfjnmmnkkk";
+	char *str = "kkkk ca kkkkkk va kkkkk  wjhqbdkw 
+	kcjnckejbcmxmnmzjbfelfjnmmnkkk";
 	char c = 'k';
 	char **split = ft_split(str, c);
 	int i = 0;
@@ -106,4 +106,4 @@ int	main(void)
 		printf("%s\n", split[i]);
 		i++;
 	}
-}*/
+} */

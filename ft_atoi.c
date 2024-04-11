@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:39:14 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/07 13:39:55 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/11 16:21:11 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ int	ft_atoi(char *str)
 #include <stdio.h>
 int main(void)
 {
-    char *str = "     ---+--+123-+4ab567";
+    char *str = "     ---+--+12300000000-+4ab567";
     printf("%d ", ft_atoi(str));
 }*/

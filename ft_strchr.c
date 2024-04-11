@@ -6,14 +6,14 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:47:29 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/08 17:48:14 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/11 18:06:14 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* renvoie un pointeur sur la première occurrence 
-    du caractère c dans la chaîne s */
+/* renvoie un pointeur sur la première occurrence
+	du caractère c dans la chaîne s */
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -21,11 +21,14 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (s[i] == (char)c)
+			break ;
 		i++;
 	}
-	return (0);
+	// on reteste ici au cas ou s n'a que '\0'
+	if (s[i] == (char)c)
+		return ((char *)&(s[i]));
+	return (NULL);
 }
 
 /*
