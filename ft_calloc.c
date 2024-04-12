@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:47:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 18:15:54 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:13:13 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*m;
+
 	m = malloc(nmemb * size);
 	if (!m)
 		return (NULL);

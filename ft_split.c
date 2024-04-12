@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:21:52 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 18:33:34 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:03:50 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,17 +91,16 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-/* 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
-	char *str = "kkkk ca kkkkkk va kkkkk  wjhqbdkw 
-	kcjnckejbcmxmnmzjbfelfjnmmnkkk";
+	char *str = "kkkk ca kkkkkk va kkkkk  
+	wjhqbdkw kcjnckejbcmxmnmzjbfelfjnmmnkkk";
 	char c = 'k';
 	char **split = ft_split(str, c);
 	int i = 0;
-	while(split[i])
+	while (split[i])
 	{
 		printf("%s\n", split[i]);
 		i++;

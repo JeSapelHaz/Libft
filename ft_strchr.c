@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:47:29 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 18:06:14 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:56:11 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strchr(const char *s, int c)
 			break ;
 		i++;
 	}
-	// on reteste ici au cas ou s n'a que '\0'
 	if (s[i] == (char)c)
 		return ((char *)&(s[i]));
 	return (NULL);

@@ -6,23 +6,37 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 15:32:12 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/09 13:51:41 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:12:58 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* copie n octets depuis la zone mémoire src vers la zone mémoire dest 
+/* copie n octets depuis la zone mémoire src vers la zone mémoire dest
 	em ayant 2 zones qui se chevauchent */
-/*void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	char	*s;
+	char	*d;
 	size_t	i;
 
+	s = (char *)src;
+	d = (char *)dst;
 	i = 0;
-	
-	return (dest);
-}*/
+	if (d > s)
+		while (len-- > 0)
+			d[len] = s[len];
+	else
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
+}
 
-/*
+/* 
 #include <stdio.h>
 #include <string.h>
 
@@ -32,6 +46,6 @@ int	main(void)
 	char dest[10] = "cecic";
 	char c[] = "pipi";
 
-	
+
 	printf("%s", memmove(c + 2, c + 1, 2));
-}*/
+} */

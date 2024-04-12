@@ -6,14 +6,14 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 17:01:21 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/08 17:48:27 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:50:50 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* renvoie un pointeur sur la dernière occurrence 
-    du caractère c dans la chaîne s  */
+/* renvoie un pointeur sur la dernière occurrence
+	du caractère c dans la chaîne s  */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	len;

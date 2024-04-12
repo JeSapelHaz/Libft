@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:06:16 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 18:41:37 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:50:45 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-	return str;
+	return (str);
 }
-/* 
-int main(void)
+/*
+int	main(void)
 {
 	char *b = "ceci est un test";
 	char b1[15];
-	
+
 
 }  */

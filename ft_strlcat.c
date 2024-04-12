@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:41:06 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/06 16:54:59 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:50:39 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 }
 
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
+int	main(void)
 {
 	char dest[40] = "salut";
 	char *src = "les amis";

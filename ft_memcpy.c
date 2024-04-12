@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 15:15:32 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/09 14:14:01 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:12:54 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -38,6 +38,6 @@ int	main(void)
 	{
 		printf("%f",dest[i]);
 	}
-	
+
 	//printf("%s", ft_memcpy(dest, src, 4));
 } */

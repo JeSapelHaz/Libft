@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:00:54 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 18:19:20 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/12 15:42:40 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (0);
 	str[count] = '\0';
-	count--;
 	nb = n;
 	if (nb < 0)
 	{
@@ -56,11 +55,10 @@ char	*ft_itoa(int n)
 		nb = nb * -1;
 		neg = 1;
 	}
-	while (neg <= count)
+	while (neg <= --count)
 	{
 		str[count] = nb % 10 + '0';
 		nb = nb / 10;
-		count--;
 	}
 	return (str);
 }
