@@ -6,7 +6,7 @@
 #    By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 13:38:30 by hbutt             #+#    #+#              #
-#    Updated: 2024/04/12 16:24:00 by hbutt            ###   ########.fr        #
+#    Updated: 2024/04/13 14:06:12 by hbutt            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,15 @@ SRC =  ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isascii.c ft_isdigit.c f
 		ft_strmapi.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
 		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 		
-SRCB = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-		ft_lstclear.c ft_lstiter.c ft_lstmap.c 
+SRCB = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+		ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
+		ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
+
+SRCSALL = ${SRC} ${SRCB}
 
 OBJ = $(SRC:.c=.o)
+
+OBJSALL = ${SRCSALL:.c=.o} 
 
 all : $(NAME)
 
@@ -43,5 +48,7 @@ clean :
 fclean : clean;
 	rm -f $(NAME)
 
+bonus : $(OBJSALL)
+	ar -rsc $(NAME) $(OBJSALL)
 
 re : fclean all

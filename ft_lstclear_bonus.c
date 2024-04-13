@@ -1,15 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:27:22 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 16:27:38 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/13 14:33:14 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void ft_lstclear(t_list **lst, void (*del)(void *));
+void ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	
+}
