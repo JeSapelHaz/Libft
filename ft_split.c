@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:21:52 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 16:03:50 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 14:46:24 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ static char	*put_str(char const *s, char c, int i)
 	j = 0;
 	len = len_word(s, c, i);
 	str = malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (0);
 	while (j < len)
 	{
 		str[j] = s[i];
@@ -71,7 +73,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	split = malloc(sizeof(char *) * count_words(s, c) + 1);
+	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!split)
 		return (0);
 	while (s[i])
@@ -95,7 +97,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char *str = "kkkk ca kkkkkk va kkkkk  
+	char *str = "kkkk ca kkkkkk va kkkkk
 	wjhqbdkw kcjnckejbcmxmnmzjbfelfjnmmnkkk";
 	char c = 'k';
 	char **split = ft_split(str, c);
