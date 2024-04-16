@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:13:29 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/08 15:18:52 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:46:44 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* supprime les la derniere et la premiere occurence de chaque carac dans set */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;

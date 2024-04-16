@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 18:44:08 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 14:59:10 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:06:04 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* ecrire n en caracteres dans le fd */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long int		nbr;

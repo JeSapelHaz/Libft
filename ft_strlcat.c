@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:41:06 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 14:50:39 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:43:25 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ int	main(void)
 	char *src2 = "les amis";
 
 	printf("%u ",ft_strlcat(dest2, src2, 4));
-	printf("%s ",dest2);}*/
+	printf("%s ",dest2);
+}
+*/

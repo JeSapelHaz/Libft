@@ -6,12 +6,13 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:06:16 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 14:50:45 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:45:17 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* malloc le string qu on va renvoyer avec la taille de s, et va appliquer 
+	la fonction sur chaque caractere et le mettre dans le nouveau str */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

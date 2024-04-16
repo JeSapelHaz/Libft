@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 18:44:47 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 14:55:13 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:02:31 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* ecrire dans le fd avec c */
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

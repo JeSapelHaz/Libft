@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:16:18 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/07 13:32:44 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:13:49 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* compare s1 et s2 avec les adresses jusqu a n */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
@@ -32,4 +32,5 @@ int	main(void)
 	const char s1[10] = "sblkk";
 	const char s2[10] = "salut";
 	printf("%d", ft_memcmp(s1, s2, 6));
-}*/
+}
+*/

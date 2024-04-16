@@ -6,12 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 16:50:03 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 19:51:19 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* cherche little dans big jusqu a len */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -40,20 +40,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-/*
+
 #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
-	char	*s1;
-	char	*s2;
-	size_t	max;
-
-	s1 = "MZIRIBMZIRIBMZE123";
-	s2 = "MZIRIBMZE";
+	char	s1[30] = "aaabcabcd";
+	char	s2[10] = "aabc";
+	size_t	max; 
 	max = strlen(s2);
-	printf("%s", strnstr(s1, s2, max));
-	printf("%s", ft_strnstr(s1, s2, max));
+	printf("%s\n", strnstr(s1, s2, -1));
+	printf("%s", ft_strnstr(s1, s2, -1));
 }
- */
+ 

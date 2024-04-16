@@ -6,13 +6,15 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:27:22 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 14:52:25 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:04:41 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/* libere la memoire de maniere recursive pour chaque element de la liste
+	mais aussi leur contenu en utilisant la fonction del*/
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	if (!lst || !(*lst) || !del)

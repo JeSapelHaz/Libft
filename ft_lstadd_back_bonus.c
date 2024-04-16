@@ -6,12 +6,15 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:26:19 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 13:57:52 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:04:46 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* creer une list temporaire, qui va pointer vers le premier element de la liste
+	vq pqrcourir lq liste, et lorsque qu on est a la fin de la list il va
+	rajouter le new*/
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*t;

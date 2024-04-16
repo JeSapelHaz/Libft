@@ -6,12 +6,15 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:24:24 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 13:51:24 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:04:44 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Le pointeur next de la nouvelle cellule new est configuré pour pointer
+	vers l'ancienne première cellule de la liste.
+	Cela garantit que la nouvelle cellule est connectée à la liste */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;

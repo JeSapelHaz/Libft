@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 15:32:12 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 16:12:58 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:57:46 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	s = (char *)src;
 	d = (char *)dst;
 	i = 0;
+	if (!dst && !src)
+		return NULL;
 	if (d > s)
 		while (len-- > 0)
 			d[len] = s[len];

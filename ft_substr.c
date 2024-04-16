@@ -6,13 +6,13 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 15:08:23 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/11 17:06:31 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 15:50:07 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
+/* renvoie une nouvelle string qui commence a s[start] jusqu a len */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new;

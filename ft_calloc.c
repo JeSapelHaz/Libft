@@ -6,17 +6,17 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:47:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 16:13:13 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 17:09:09 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
+/* va donnner la bonne taille et va tout initialiser a 0 */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*m;
-
+	
 	m = malloc(nmemb * size);
 	if (!m)
 		return (NULL);

@@ -6,12 +6,13 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:00:54 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 15:42:40 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/16 16:05:12 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* compte le nombre de caracteres */
 static int	ft_count(int n)
 {
 	int	i;
@@ -35,6 +36,8 @@ static int	ft_count(int n)
 	return (i);
 }
 
+/* malloc la bonne taille grace a la fonction count
+	et va retourner chaque dizaine en caractere */
 char	*ft_itoa(int n)
 {
 	char	*str;
