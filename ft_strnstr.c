@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 19:51:19 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/17 16:06:51 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-
+/* 
 #include <stdio.h>
 #include <string.h>
 
@@ -53,4 +53,4 @@ int	main(void)
 	printf("%s\n", strnstr(s1, s2, -1));
 	printf("%s", ft_strnstr(s1, s2, -1));
 }
- 
+  */
