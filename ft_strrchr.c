@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 17:01:21 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/12 14:50:50 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/17 17:31:14 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (len >= 0)
 	{
-		if (s[len] == c)
+		if ((unsigned char)s[len] == (unsigned char)c)
 			return ((char *)&s[len]);
 		len--;
 	}
