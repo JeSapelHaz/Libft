@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:21:52 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 14:46:24 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/19 16:46:22 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,77 +31,80 @@ static int	count_words(char const *s, char c)
 	return (nb);
 }
 
-static int	len_word(char const *s, char c, int i)
+static void	ft_putstr(char *split, char const *str, char c)
 {
-	int	nb;
-
-	nb = 0;
-	while (s[i] != c && s[i])
-	{
-		nb++;
-		i++;
-	}
-	return (nb);
-}
-
-static char	*put_str(char const *s, char c, int i)
-{
-	int		j;
-	int		len;
-	char	*str;
-
-	j = 0;
-	len = len_word(s, c, i);
-	str = malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (0);
-	while (j < len)
-	{
-		str[j] = s[i];
-		i++;
-		j++;
-	}
-	str[j] = '\0';
-	return (str);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**split;
-	int		i;
-	int		j;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	while (str[i] != c && str[i])
+	{
+		split[i] = str[i];
+		i++;
+	}
+	split[i] = '\0';
+}
+
+static int	ft_put_in_split(char **split, char const *str, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	k;
+
+	i = 0;
+	k = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			i++;
+		else
+		{
+			j = 0;
+			while (str[i + j] != c && str[i + j])
+				j++;
+			split[k] = malloc(sizeof(char) * j + 1);
+			if (!split[k])
+				return (0);
+			ft_putstr(split[k], str + i, c);
+			i += j;
+			k++;
+		}
+	}
+	return (1);
+}
+
+char	**ft_split(char const *str, char c)
+{
+	char	**split;
+	size_t	size;
+	int		k;
+
+	size = count_words(str, c);
+	split = malloc((size + 1) * sizeof(char *));
 	if (!split)
 		return (0);
-	while (s[i])
+	k = ft_put_in_split(split, str, c);
+	if (k == 0)
 	{
-		while (s[i] == c && s[i])
-			i++;
-		if (s[i] != c && s[i])
+		while (split[k])
 		{
-			split[j] = put_str(s, c, i);
-			i++;
-			j++;
+			free(split[k]);
+			k++;
 		}
-		while (s[i] != c && s[i])
-			i++;
+		free(split);
+		return (0);
 	}
-	split[j] = 0;
+	split[size] = 0;
 	return (split);
 }
 
 /* #include <stdio.h>
-
 int	main(void)
 {
 	char *str = "kkkk ca kkkkkk va kkkkk
 	wjhqbdkw kcjnckejbcmxmnmzjbfelfjnmmnkkk";
-	char c = 'k';
-	char **split = ft_split(str, c);
-	int i = 0;
+	c = 'k';
+	split = ft_split(str, c);
+	i = 0;
 	while (split[i])
 	{
 		printf("%s\n", split[i]);

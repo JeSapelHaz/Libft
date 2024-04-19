@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/17 16:06:51 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/19 16:19:10 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(void)
 {
 	char	s1[30] = "aaabcabcd";
 	char	s2[10] = "aabc";
-	size_t	max; 
+	size_t	max; 
 	max = strlen(s2);
 	printf("%s\n", strnstr(s1, s2, -1));
 	printf("%s", ft_strnstr(s1, s2, -1));
