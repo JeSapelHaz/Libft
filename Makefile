@@ -6,7 +6,7 @@
 #    By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 13:38:30 by hbutt             #+#    #+#              #
-#    Updated: 2024/04/19 12:45:58 by hbutt            ###   ########.fr        #
+#    Updated: 2024/04/19 17:01:13 by hbutt            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SRCSALL = ${SRC} ${SRCB}
 
 OBJ = $(SRC:.c=.o)
 
+OBJB = ${SRCB:.c=.o}
+
 OBJSALL = ${SRCSALL:.c=.o} 
 
 all : $(NAME)
@@ -49,8 +51,8 @@ clean :
 fclean : clean;
 	rm -f $(NAME)
 
-bonus : $(OBJSALL)
-	ar rc $(NAME) $(OBJSALL)
+bonus : $(OBJB)
+	ar rc $(NAME) $(OBJB)
 
 re : fclean all
 
