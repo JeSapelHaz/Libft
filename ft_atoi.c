@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:39:14 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 14:53:02 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 18:12:10 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,41 @@
 
 int	ft_atoi(char *str)
 {
-	int	sign;
-	int	result;
-	int	i;
+	char		sign;
+	long int	result;
+	long int	tmp;
 
-	i = 0;
 	result = 0;
 	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == 45)
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '-' || *str == 43)
 	{
-		sign = -1;
-		i++;
+		if (*str == 45)
+			sign *= -1;
+		str++;
 	}
-	else if (str[i] == 43)
-		i++;
-	while (str[i] >= 48 && str[i] <= 57)
+	while (*str >= 48 && *str <= 57)
 	{
-		result *= 10;
-		result += str[i] - 48;
-		i++;
+		tmp = result;
+		result = result * 10 + (*str - 48);
+		if (result < tmp && sign == 1)
+			return (-1);
+		if (result < tmp && sign == -1)
+			return (0);
+		str++;
 	}
-	result *= sign;
-	return (result);
+	return (result * sign);
 }
-/*
-#include <stdio.h>
+
+/* #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char *str = "+12300000000-+4ab567";
-	printf("%d ", ft_atoi(str));
-}*/
+	char	*str;
+
+	str = "9223372036854655613515613";
+	printf("%d \n", ft_atoi(str));
+	printf("%d ", atoi(str));
+} */

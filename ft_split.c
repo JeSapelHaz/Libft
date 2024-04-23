@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:21:52 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/19 16:46:22 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 17:58:47 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ char	**ft_split(char const *str, char c)
 	size_t	size;
 	int		k;
 
+	if (!str)
+		return (NULL);
 	size = count_words(str, c);
 	split = malloc((size + 1) * sizeof(char *));
 	if (!split)

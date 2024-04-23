@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:29:15 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/19 16:57:25 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 17:54:42 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*a;
 	void	*node;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	new = NULL;
 	while (lst)

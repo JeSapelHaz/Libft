@@ -6,16 +6,19 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 18:43:05 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 15:07:31 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 18:04:43 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /* */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{

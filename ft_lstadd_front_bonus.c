@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:24:24 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 16:04:44 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 17:53:08 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 	Cela garantit que la nouvelle cellule est connectée à la liste */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

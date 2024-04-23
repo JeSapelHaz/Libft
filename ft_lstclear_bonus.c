@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:27:22 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/16 16:04:41 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 18:08:57 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@
 	mais aussi leur contenu en utilisant la fonction del*/
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst || !(*lst) || !del)
+	t_list	*new;
+
+	if (!lst)
 		return ;
-	if ((*lst)->next)
-		ft_lstclear((&(*lst)->next), del);
-	del((*lst)->content);
-	free(*lst);
-	*lst = NULL;
+	while (*lst)
+	{
+		new = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = new;
+	}
 }

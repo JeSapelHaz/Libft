@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/19 16:19:10 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/23 18:10:53 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 	size_t	k;
 
-	i = 0;
+	i = -1;
+	if (!big || !little)
+		return (NULL);
 	if (little[0] == '\0')
 		return ((char *)&big[0]);
-	while (big[i] && i < len)
+	while (big[++i] && i < len)
 	{
 		if (big[i] == little[0])
 		{
@@ -35,12 +37,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				j++;
 			}
 		}
-		i++;
 	}
 	return (0);
 }
 
-/* 
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -48,7 +49,8 @@ int	main(void)
 {
 	char	s1[30] = "aaabcabcd";
 	char	s2[10] = "aabc";
-	size_t	max; 
+	size_t	max;
+
 	max = strlen(s2);
 	printf("%s\n", strnstr(s1, s2, -1));
 	printf("%s", ft_strnstr(s1, s2, -1));
