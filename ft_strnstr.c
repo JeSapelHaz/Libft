@@ -6,11 +6,12 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/23 18:10:53 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/24 14:48:18 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /* cherche little dans big jusqu a len */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -19,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	k;
 
 	i = -1;
-	if (!big || !little)
+	if (!little && !big)
 		return (NULL);
 	if (little[0] == '\0')
 		return ((char *)&big[0]);
@@ -41,18 +42,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int	main(void)
-{
-	char	s1[30] = "aaabcabcd";
-	char	s2[10] = "aabc";
-	size_t	max;
+// int	main(void)
+// {
+// 	char	s2[30] = "aaabcabcd";
+// 	char	*s1 = NULL;
+// 	size_t	max;
 
-	max = strlen(s2);
-	printf("%s\n", strnstr(s1, s2, -1));
-	printf("%s", ft_strnstr(s1, s2, -1));
-}
-  */
+// 	max = strlen(s2);
+// 	printf("%s\n", strnstr(s1, s2, -1));
+// 	printf("%s", ft_strnstr(s1, s2, -1));
+// }
