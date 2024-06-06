@@ -6,7 +6,7 @@
 /*   By: hbutt <hbutt@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 13:33:13 by hbutt             #+#    #+#             */
-/*   Updated: 2024/04/24 14:48:18 by hbutt            ###   ########.fr       */
+/*   Updated: 2024/04/28 20:41:00 by hbutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int	main(void)
 // {
-// 	char	s2[30] = "aaabcabcd";
-// 	char	*s1 = NULL;
+// 	char	s2[30] = "ccc";
+// 	char	s1[30] = "aaaaaaaaaaaaabbb ccc";
 // 	size_t	max;
 
 // 	max = strlen(s2);
